@@ -56,6 +56,7 @@ The traditional workflow can require NSS Personnel to submit a form, administrat
 - node-postgres (`pg`)
 - bcrypt
 - express-session
+- connect-pg-simple
 - dotenv
 - Helmet
 - PDFKit for PDF export
@@ -233,7 +234,7 @@ The application validates registration and login server-side, performs browser v
 6. Seed only if demonstration data is desired.
 7. Start with `npm start`.
 8. Put the Node.js process behind a TLS-terminating reverse proxy or managed platform.
-9. Use a production session store instead of the default in-memory session store before handling real traffic.
+9. The application uses PostgreSQL-backed sessions through `connect-pg-simple`.
 10. Rotate demo credentials and use a strong randomly generated session secret.
 
 ## Future improvements
