@@ -1,0 +1,6 @@
+function isEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v||'')); }
+function clean(v){ return String(v||'').trim(); }
+function registration(req,res,next){ const {name,email,password,studentId,programme}=req.body; if(!clean(name)||!isEmail(email)||String(password||'').length<8||!clean(studentId)||!clean(programme)) return res.status(400).render('auth/register',{title:'Register', error:'Please provide valid details. Password must be at least 8 characters.'}); next(); }
+function login(req,res,next){ if(!isEmail(req.body.email)||!req.body.password) return res.status(400).render('auth/login',{title:'Login', error:'Enter a valid email and password.'}); next(); }
+function errorHandler(err,req,res,next){ console.error(err); if(res.headersSent) return next(err); const missingDatabase=!process.env.DATABASE_URL&&err?.message?.includes('DATABASE_URL'); const message=process.env.NODE_ENV==='production'?'The request could not be completed. Please try again.':missingDatabase?'Database configuration is missing. Copy .env.example to .env, set DATABASE_URL, then run the PostgreSQL setup script.':err?.message||'The request could not be completed. Please try again.'; res.status(err.status||500).render('errors/500',{title:'Server Error',message}); }
+module.exports={registration,login,errorHandler,clean};

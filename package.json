@@ -1,0 +1,23 @@
+{
+  "name": "nsa-evaluation-system",
+  "version": "1.0.0",
+  "description": "Production-quality prototype for centralized NSA evaluation appointment management.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "db:setup": "node database/setup.js",
+    "seed": "node database/seed.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "pdfkit": "^0.17.2",
+    "pg": "^8.16.3"
+  }
+}
