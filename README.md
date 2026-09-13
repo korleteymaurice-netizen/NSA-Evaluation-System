@@ -2,6 +2,8 @@
 
 A standalone prototype for replacing a manual evaluation appointment workflow with a centralized NSS Personnel and administrator portal. It is intentionally designed as an independent application and does not copy NSA source code, proprietary assets, or the existing NSA website design.
 
+Demo Link: 'https://nsa-evaluation.vercel.app/'
+
 ## Problem being solved
 
 The traditional workflow can require NSS Personnel to submit a form, administrators to manually allocate dates and time slots, and appointment lists to be distributed as PDFs. This prototype centralizes registration, slot availability, booking, appointment status, attendance, search, and reporting in one application.
@@ -147,16 +149,15 @@ The seed creates fictional demonstration data only.
 ## Demo credentials
 
 ### Administrator
-- Email: `admin@nsa-demo.local`
+- Email: `Admin@gmail.com`
 - Password: `Admin@12345`
 
 ### NSS Personnel
-- Email: `ama.student@nsa-demo.local`
-- Password: `Student@12345`
+- Email: `korleteymaurice@gmail.com`
+- Password: `12345678`
 
-Other seeded NSS Personnel emails include `kojo.student@nsa-demo.local`, `efua.student@nsa-demo.local`, `kofi.student@nsa-demo.local`, and `abena.student@nsa-demo.local`, all using the same demo password.
 
-Do not use these credentials in a real deployment.
+
 
 ## Run locally
 
