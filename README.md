@@ -258,3 +258,5 @@ The application validates registration and login server-side, performs browser v
 ## Testing notes
 
 The source tree has been checked for JavaScript syntax errors. The build environment used to assemble this prototype does not have PostgreSQL or npm registry DNS/network access, so a live migration, seed execution, and full browser/database integration test could not be executed in this environment. On a machine with PostgreSQL and normal npm registry access, follow the installation and migration steps above before starting the server.
+
+<img src="images/dashboard.png" alt="Dashboard" width="800">
